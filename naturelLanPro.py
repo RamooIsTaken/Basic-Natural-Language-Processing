@@ -35,3 +35,10 @@ yPred = gnb.predict(x_test)
 
 cm = confusion_matrix(y_test,yPred)
 print(cm)
+tn, fp, fn, tp = cm.ravel()
+sensitivity = tp / (tp + fn)
+specificity = tn / (tn + fp)
+
+print("Sensitivity:", sensitivity)
+print("Specificity:", specificity)
+
